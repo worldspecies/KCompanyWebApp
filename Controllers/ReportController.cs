@@ -16,9 +16,9 @@ namespace KCompanyWebApp.Controllers
 
         public IActionResult Index()
         {
-            if(HttpContext.Session.GetString("EmployeeID")  == null)
+            if (String.IsNullOrEmpty(HttpContext.Session.GetString("EmployeeID")))
             {
-                LogOut();
+                return RedirectToAction("Index", "Home");
             }
             var RoleAccess = HttpContext.Session.GetListObjectFromSession<List<MsPage>>("PageAccess");
             this.ViewBag.EmployeeID = HttpContext.Session.GetString("EmployeeID");
@@ -32,9 +32,9 @@ namespace KCompanyWebApp.Controllers
         [HttpGet]
         public IActionResult GetSalesReport()
         {
-            if (HttpContext.Session.GetString("EmployeeID") == null)
+            if (String.IsNullOrEmpty(HttpContext.Session.GetString("EmployeeID")))
             {
-                LogOut();
+                return RedirectToAction("Index", "Home");
             }
             var RoleAccess = HttpContext.Session.GetListObjectFromSession<List<MsPage>>("PageAccess");
             this.ViewBag.RoleAccess = RoleAccess;
@@ -64,13 +64,6 @@ namespace KCompanyWebApp.Controllers
                                       }).ToList();
             this.ViewBag.Message = null;
             return View("SalesReport");
-        }
-
-        public IActionResult LogOut()
-        {
-            HttpContext.Session.Clear();
-            HttpContext.SignOutAsync();
-            return RedirectToAction("Index", "Home");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

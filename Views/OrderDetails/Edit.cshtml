@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Order Details";
+}
+@model KCompanyWebApp.Models.TrOrderDtl
+
+<h3>
+    Edit Order Detail
+</h3>
+
+@if(ViewBag.OrderNo!=null){
+    <h2>@ViewBag.OrderNo</h2>
+}
+
+@if (@ViewBag.Message != null)
+{
+    <div style="color:red;">
+        @ViewBag.Message
+    </div>
+}
+
+@using (Html.BeginForm("Update", "OrderDetails", FormMethod.Post))
+{
+    //this is for create form tag
+    @Html.AntiForgeryToken()
+    // this is for prevent CSRF attack
+    @Html.ValidationSummary(true)
+
+    <table>
+        @Html.HiddenFor(a => a.OrderDtlID)
+        @Html.HiddenFor(a => a.OrderNo)
+        @Html.HiddenFor(a => a.ActiveFlag)
+        <tr>
+            <td>@Html.LabelFor(a => a.ProductNo)</td>
+            <td>@Html.TextBoxFor(a => a.ProductNo)</td>
+            <td>@Html.ValidationMessageFor(a => a.ProductNo)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(a => a.Quantity)</td>
+            <td>@Html.TextBoxFor(a => a.Quantity)</td>
+            <td>@Html.ValidationMessageFor(a => a.Quantity)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(a => a.Price)</td>
+            <td>@Html.TextBoxFor(a => a.Price)</td>
+            <td>@Html.ValidationMessageFor(a => a.Price)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(a => a.Total)</td>
+            <td>@Html.TextBoxFor(a => a.Total)</td>
+            <td>@Html.ValidationMessageFor(a => a.Total)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(a => a.Description)</td>
+            <td>@Html.TextBoxFor(a => a.Description)</td>
+            <td>@Html.ValidationMessageFor(a => a.Description)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input class="btn btn-primary" type="submit" value="Update" />
+            </td>
+            <td></td>
+        </tr>
+    </table>
+}

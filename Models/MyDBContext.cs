@@ -282,9 +282,9 @@ public partial class MyDBContext : DbContext
 
         modelBuilder.Entity<TrOrderDtl>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("TrOrderDtl");
+            entity.HasKey(e => e.OrderDtlID); 
+            entity.ToTable("TrOrderDtl");
+            entity.Property(e => e.OrderDtlID);
 
             entity.Property(e => e.ActiveFlag)
                 .HasMaxLength(1)

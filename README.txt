@@ -10,12 +10,14 @@
 *----------------------------------------------------------------------*
 *----------------------------------------------------------------------*
 
-1. Please check Architecture & ERD Pictures to get better understanding about the app
+1. Please check Folder "README Files", to see Architecture & ERD Pictures to get better understanding about the app
 
 2. There are 2 connection strings to simulate different server, you need to configure it first
 "DefaultConnection": "Server=.\\MSSQLSERVER02;Database=dbKCompany;UID=sa;PWD=P0w3rfull;TrustServerCertificate=True;",
 "SSOConnection": "Server=.\\SQLEXPRESS;Database=dbAuth;Trusted_Connection=True;TrustServerCertificate=True"
 
 3. After that, configure the database contents, execute the sql file = dbKCompany.sql
+-dbKCompany using DefaultConnection
+-dbAuth using SSOConnection
 
-4. Default password for every role is = abc@123
+4. Default password (encrypted) for every role is = abc@123

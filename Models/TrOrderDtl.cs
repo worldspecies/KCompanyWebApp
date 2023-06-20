@@ -6,6 +6,7 @@ namespace KCompanyWebApp.Models;
 [Table("TrOrderDtl")]
 public partial class TrOrderDtl
 {
+    public int OrderDtlID { get; set; }
     public string OrderNo { get; set; } = null!;
 
     public string? ProductNo { get; set; }
@@ -15,7 +16,7 @@ public partial class TrOrderDtl
     public decimal? Price { get; set; }
 
     public decimal? Total { get; set; }
-    public string? Description { get; set; }
+    public string Description { get; set; }
 
     public string ActiveFlag { get; set; } = null!;
 

@@ -16,9 +16,9 @@ namespace KCompanyWebApp.Controllers
 
         public IActionResult Index()
         {
-            if(HttpContext.Session.GetString("EmployeeID")  == null)
+            if (String.IsNullOrEmpty(HttpContext.Session.GetString("EmployeeID")))
             {
-                LogOut();
+                return RedirectToAction("Index", "Home");
             }
             var RoleAccess = HttpContext.Session.GetListObjectFromSession<List<MsPage>>("PageAccess");
             this.ViewBag.EmployeeID = HttpContext.Session.GetString("EmployeeID");
@@ -32,12 +32,6 @@ namespace KCompanyWebApp.Controllers
             return View();
         }
 
-        public IActionResult LogOut()
-        {
-            HttpContext.Session.Clear();
-            HttpContext.SignOutAsync();
-            return RedirectToAction("Index", "Home");
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

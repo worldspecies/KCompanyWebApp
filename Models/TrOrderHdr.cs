@@ -20,7 +20,7 @@ public partial class TrOrderHdr
 
     public decimal? GrandTotal { get; set; }
 
-    public string? Description { get; set; }
+    public string Description { get; set; }
 
     public string CrtUsrId { get; set; } = null!;
 
