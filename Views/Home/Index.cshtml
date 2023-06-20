@@ -1,8 +1,47 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
+    ViewData["Title"] = "Login Page";
+}
+@model KCompanyWebApp.Models.MsUser
+<h2>login</h2>
+
+@if (@ViewBag.Message != null)
+{
+    <div style="border:1px solid red">
+        @ViewBag.Message
+    </div>
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    //this is for create form tag
+    @Html.AntiForgeryToken()
+    // this is for prevent CSRF attack
+    @Html.ValidationSummary(true)
+
+    <table>
+        <tr>
+            <td>@Html.LabelFor(a => a.UserId)</td>
+            <td>@Html.TextBoxFor(a => a.UserId)</td>
+            <td>@Html.ValidationMessageFor(a => a.UserId)</td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(a => a.Password)
+            </td>
+            <td>
+                @Html.PasswordFor(a => a.Password)
+            </td>
+            <td>
+                @Html.ValidationMessageFor(a => a.Password)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Login" />
+            </td>
+            <td></td>
+        </tr>
+    </table>
+} 

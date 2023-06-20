@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Order Page";
+}
+@model KCompanyWebApp.Models.TrOrderHdr
+
+<h3>Edit Order</h3>
+
+@if(ViewBag.OrderNo!=null){
+    <h2>ViewBag.OrderNo</h2>
+}
+
+@if (@ViewBag.Message != null)
+{
+    <div style="border:1px solid red">
+        @ViewBag.Message
+    </div>
+}
+
+@if (ViewBag.OrderHdr != null)
+{
+    @using (Html.BeginForm("Update", "Order", FormMethod.Post))
+    {
+        //this is for create form tag
+        @Html.AntiForgeryToken()
+        // this is for prevent CSRF attack
+        @Html.ValidationSummary(true)
+
+        <table>
+            <tr>
+                <td>@Html.LabelFor(a => a.OrderDate)</td>
+                <td>@Html.TextBoxFor(a => a.OrderDate)</td>
+                <td>@Html.ValidationMessageFor(a => a.OrderDate)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(a => a.StoreNo)</td>
+                <td>@Html.TextBoxFor(a => a.StoreNo)</td>
+                <td>@Html.ValidationMessageFor(a => a.StoreNo)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(a => a.AreaNo)</td>
+                <td>@Html.TextBoxFor(a => a.AreaNo)</td>
+                <td>@Html.ValidationMessageFor(a => a.AreaNo)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(a => a.SalesmanNo)</td>
+                <td>@Html.TextBoxFor(a => a.SalesmanNo)</td>
+                <td>@Html.ValidationMessageFor(a => a.SalesmanNo)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(a => a.CustomerNo)</td>
+                <td>@Html.TextBoxFor(a => a.CustomerNo)</td>
+                <td>@Html.ValidationMessageFor(a => a.CustomerNo)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(a => a.Description)</td>
+                <td>@Html.TextBoxFor(a => a.Description)</td>
+                <td>@Html.ValidationMessageFor(a => a.Description)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Update" />
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    }
+}

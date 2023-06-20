@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Order Details";
+}
+@model KCompanyWebApp.Models.TrOrderDtl
+
+<h2>Order Details</h2>
+@if(ViewBag.OrderHdr != null){
+    var ord = ViewBag.OrderHdr;
+
+    <table class="table" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>OrderNo / OrderDate</td>
+            <td>@ord.OrderNo / @ord.OrderDate</td>
+        </tr>
+        <tr>
+            <td>AreaNo / SalesmanNo / Customer No</td>
+            <td>@ord.AreaNo / @ord.SalesmanNo / @ord.CustomerNo</td>
+        </tr>
+        <tr>
+            <td>Grand Total</td>
+            <td>@ord.GrandTotal</td>
+        </tr>
+    </table>
+    <br />
+}
+
+@if (ViewBag.OrderDtl != null && (ViewBag.EmployeeRole != "WORKSHOPMAN" || ViewBag.EmployeeRole != "STOREMAN" ))
+{
+    <table class="table table-striped table-hover" cellpadding="0" cellspacing="0">
+        <thead class="table-dark">
+            <tr>
+                <th>ProductNo</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var det in ViewBag.OrderDtl)
+            {
+                <tr>
+                    <td></td>
+                    <td>@det.Quantity.ToString()</td>
+                    <td>@det.Price.ToString()</td>
+                    <td>@det.Total.ToString()</td>
+                    <td>@det.Description.ToString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else{
+    <table class="table table-striped table-hover" cellpadding="0" cellspacing="0">
+        <thead class="table-dark">
+            <tr>
+                <th>ProductNo</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var det in ViewBag.OrderDtl)
+            {
+                <tr>
+                    <td>@det.ProductNo.ToString()</td>
+                    <td>@det.Quantity.ToString()</td>
+                    <td>@det.Price.ToString()</td>
+                    <td>@det.Total.ToString()</td>
+                    <td>@det.Description.ToString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
