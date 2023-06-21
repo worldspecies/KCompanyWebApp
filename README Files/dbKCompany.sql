@@ -9,6 +9,7 @@ CREATE TABLE [dbo].[MsUser](
 	[AreaNo] [varchar](20) NULL,
 	[Role] [varchar](20) NULL, /* ADMIN / CASHIER / SALESMAN / SERVICEAD / WORKSHOPMAN / STOREMAN */
 	[Password] [varchar](255) NULL, /* CONVERT(VARCHAR(32), HashBytes('MD5', 'abc@123'), 2) */
+	[AccessToken] [varchar](255) NULL,
 	[CrtUsrID] [varchar](25) NOT NULL,
 	[TsCrt] [datetime] NOT NULL,
 	[ModUsrID] [varchar](25) NOT NULL,
@@ -21,13 +22,13 @@ CREATE TABLE [dbo].[MsUser](
 ) ON [PRIMARY]
 
 INSERT INTO [dbo].[MsUser] VALUES
-('administrator','Administrator',NULL,'ADMIN','B24331B1A138CDE62AA1F679164FC62F','administrator','2023-06-20 00:00:00.000','administrator','2023-06-20 00:00:00.000','Y'),
-('cashier1','Cashier 1','A00001','CASHIER','B24331B1A138CDE62AA1F679164FC62F','administrator','2023-06-20 00:00:00.000','administrator','2023-06-20 00:00:00.000','Y'),
-('cashier2','Cashier 2','A00003','CASHIER','B24331B1A138CDE62AA1F679164FC62F','administrator','2023-06-20 00:00:00.000','administrator','2023-06-20 00:00:00.000','Y'),
-('salesman1','Salesman 1','A00002','SALESMAN','B24331B1A138CDE62AA1F679164FC62F','administrator','2023-06-20 00:00:00.000','administrator','2023-06-20 00:00:00.000','Y'),
-('servicead1','Service Advisor 1',NULL,'SERVICEAD','B24331B1A138CDE62AA1F679164FC62F','administrator','2023-06-20 00:00:00.000','administrator','2023-06-20 00:00:00.000','Y'),
-('workshopman1','Workshop Manager 1',NULL,'WORKSHOPMAN','B24331B1A138CDE62AA1F679164FC62F','administrator','2023-06-20 00:00:00.000','administrator','2023-06-20 00:00:00.000','Y'),
-('storeman1','Store Manager 1',NULL,'STOREMAN','B24331B1A138CDE62AA1F679164FC62F','administrator','2023-06-20 00:00:00.000','administrator','2023-06-20 00:00:00.000','Y');
+('administrator','Administrator',NULL,'ADMIN','B24331B1A138CDE62AA1F679164FC62F','','administrator','2023-06-20 00:00:00.000','administrator','2023-06-20 00:00:00.000','Y'),
+('cashier1','Cashier 1','A00001','CASHIER','B24331B1A138CDE62AA1F679164FC62F','','administrator','2023-06-20 00:00:00.000','administrator','2023-06-20 00:00:00.000','Y'),
+('cashier2','Cashier 2','A00003','CASHIER','B24331B1A138CDE62AA1F679164FC62F','','administrator','2023-06-20 00:00:00.000','administrator','2023-06-20 00:00:00.000','Y'),
+('salesman1','Salesman 1','A00002','SALESMAN','B24331B1A138CDE62AA1F679164FC62F','','administrator','2023-06-20 00:00:00.000','administrator','2023-06-20 00:00:00.000','Y'),
+('servicead1','Service Advisor 1',NULL,'SERVICEAD','B24331B1A138CDE62AA1F679164FC62F','','administrator','2023-06-20 00:00:00.000','administrator','2023-06-20 00:00:00.000','Y'),
+('workshopman1','Workshop Manager 1',NULL,'WORKSHOPMAN','B24331B1A138CDE62AA1F679164FC62F','','administrator','2023-06-20 00:00:00.000','administrator','2023-06-20 00:00:00.000','Y'),
+('storeman1','Store Manager 1',NULL,'STOREMAN','B24331B1A138CDE62AA1F679164FC62F','','administrator','2023-06-20 00:00:00.000','administrator','2023-06-20 00:00:00.000','Y');
 
 
 /* K-Company */
@@ -175,8 +176,8 @@ INSERT INTO [dbo].[MsPricingConfig] VALUES
 
 CREATE TABLE [dbo].[MsCustomer](
 	[CustomerNo] [varchar](50) NOT NULL,
-	[CustomerType] [varchar](10) NULL,
 	[CustomerName] [varchar](50) NULL,
+	[CustomerType] [varchar](10) NULL,
 	[Address] [varchar](200) NULL,
 	[Phone] [varchar](50) NULL,
 	[CrtUsrID] [varchar](25) NOT NULL,

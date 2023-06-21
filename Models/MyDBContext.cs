@@ -23,7 +23,7 @@ public partial class MyDBContext : DbContext
 
     public virtual DbSet<MsPricingConfig> MsPricingConfigs { get; set; }
 
-    public virtual DbSet<MsProductSparepart> MsProductSpareparts { get; set; }
+    public virtual DbSet<ProductServiceModel> MsProductSpareparts { get; set; }
 
     public virtual DbSet<MsRoleAccess> MsRoleAccesses { get; set; }
 
@@ -183,7 +183,7 @@ public partial class MyDBContext : DbContext
                 .HasConstraintName("FK_MsPricingConfig_MsProductSparepart");
         });
 
-        modelBuilder.Entity<MsProductSparepart>(entity =>
+        modelBuilder.Entity<ProductServiceModel>(entity =>
         {
             entity.HasKey(e => e.ProductNo);
 

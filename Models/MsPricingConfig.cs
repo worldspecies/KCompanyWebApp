@@ -30,5 +30,5 @@ public partial class MsPricingConfig
 
     public string ActiveFlag { get; set; } = null!;
 
-    public virtual MsProductSparepart ProductNoNavigation { get; set; } = null!;
+    public virtual ProductServiceModel ProductNoNavigation { get; set; } = null!;
 }

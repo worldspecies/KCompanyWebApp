@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KCompanyWebApp.Models;
 [Table("MsProductSparepart")]
-public partial class MsProductSparepart
+public partial class ProductServiceModel
 {
     public string ProductNo { get; set; } = null!;
 

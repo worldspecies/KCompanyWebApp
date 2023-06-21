@@ -51,7 +51,6 @@ namespace KCompanyWebApp.Controllers
             var newOrder = new TrOrderHdr();
 
             var prevOrder = dbContext.TrOrderHdrs.OrderByDescending(f => f.OrderNo).FirstOrDefault();
-            
             var newOrderNumb = "00001";
             var employeeID = HttpContext.Session.GetString("EmployeeID");
             if (prevOrder != null)

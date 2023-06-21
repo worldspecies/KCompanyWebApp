@@ -65,6 +65,9 @@ public partial class MyDBAuth : DbContext
             entity.Property(e => e.Password)
                 .HasMaxLength(255)
                 .IsUnicode(false);
+            entity.Property(e => e.AccessToken)
+                .HasMaxLength(255)
+                .IsUnicode(false);
             entity.Property(e => e.Role)
                 .HasMaxLength(20)
                 .IsUnicode(false);

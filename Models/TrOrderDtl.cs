@@ -22,5 +22,5 @@ public partial class TrOrderDtl
 
     public virtual TrOrderHdr OrderNoNavigation { get; set; } = null!;
 
-    public virtual MsProductSparepart? ProductNoNavigation { get; set; }
+    public virtual ProductServiceModel? ProductNoNavigation { get; set; }
 }

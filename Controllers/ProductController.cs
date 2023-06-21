@@ -27,7 +27,7 @@ namespace KCompanyWebApp.Controllers
             this.ViewBag.RoleAccess = RoleAccess;
 
             var dbContext = new MyDBContext();
-            this.ViewBag.Products = dbContext.MsProductSpareparts.Where(f => f.ActiveFlag == "Y").ToList<MsProductSparepart>();
+            this.ViewBag.Products = dbContext.MsProductSpareparts.Where(f => f.ActiveFlag == "Y").ToList<ProductServiceModel>();
             this.ViewBag.Message = null;
             return View();
         }

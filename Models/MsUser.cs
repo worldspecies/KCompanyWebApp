@@ -15,6 +15,7 @@ public partial class MsUser
     public string? Role { get; set; }
 
     public string? Password { get; set; }
+    public string? AccessToken { get; set; }
 
     public string CrtUsrId { get; set; } = null!;
 

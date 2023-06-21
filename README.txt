@@ -21,3 +21,10 @@
 -dbAuth using SSOConnection
 
 4. Default password (encrypted) for every role is = abc@123
+
+5. SOAP API Structure (Tested by Chrome Ext Wizdler)
+{address}/api/v1/login
+{address}/api/v1/product
+{address}/api/v1/pricelist
+{address}/api/v1/customer
+{address}/api/v1/order
