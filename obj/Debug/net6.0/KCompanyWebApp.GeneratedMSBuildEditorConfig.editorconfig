@@ -9,37 +9,77 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KCompanyWebApp
 build_property.RootNamespace = KCompanyWebApp
-build_property.ProjectDir = C:\Users\agunawan\Documents\Visual Studio 2022\Projects\KCompanyWebApp\
+build_property.ProjectDir = C:\Users\agunawan\Documents\GitHub\KCompanyWebApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\agunawan\Documents\Visual Studio 2022\Projects\KCompanyWebApp
+build_property.MSBuildProjectDirectory = C:\Users\agunawan\Documents\GitHub\KCompanyWebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/agunawan/Documents/Visual Studio 2022/Projects/KCompanyWebApp/Views/Home/Index.cshtml]
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/Customer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agunawan/Documents/Visual Studio 2022/Projects/KCompanyWebApp/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/Landing/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZGluZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agunawan/Documents/Visual Studio 2022/Projects/KCompanyWebApp/Views/Shared/Error.cshtml]
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/OrderDetails/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxzXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/OrderDetails/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/OrderDetails/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/Order/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/Order/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/Report/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/Report/SalesReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFNhbGVzUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agunawan/Documents/Visual Studio 2022/Projects/KCompanyWebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agunawan/Documents/Visual Studio 2022/Projects/KCompanyWebApp/Views/_ViewImports.cshtml]
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agunawan/Documents/Visual Studio 2022/Projects/KCompanyWebApp/Views/_ViewStart.cshtml]
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/agunawan/Documents/Visual Studio 2022/Projects/KCompanyWebApp/Views/Shared/_Layout.cshtml]
+[C:/Users/agunawan/Documents/GitHub/KCompanyWebApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6df7k60s3x
